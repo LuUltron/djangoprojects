@@ -3,7 +3,16 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'main4/index.html')
+    data = {
+        'title': 'Glavnaya stranitsa!!',
+        'values': ['some', 'Hello', 123],
+        'obj': {
+            'car': 'bmw',
+            'age': 18,
+            'hobby': 'football'
+        }
+    }
+    return render(request, 'main4/index.html', data)
 
 def about(request):
     return render(request, 'main4/about.html')

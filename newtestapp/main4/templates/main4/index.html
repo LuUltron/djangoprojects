@@ -1,10 +1,17 @@
 {% extends 'main4/layout.html' %}
 
-{% block title %}
-Glavnaya stranitsa
-{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-    <h1>Glavnaya stranitsa</h1>
-    <p>Glavnaya stranitsa</p>
+    <div class="features">
+        <h1>{{ title }}</h1>
+        <p>Tekst na glavnoi stranitse</p>
+        <button class="btn btn-warning">Na stranitsu pro nas</button>
+        {% for val in values %}
+            <p>{{ val }}</p>
+        {% endfor %}
+        {% for val in obj %}
+            <p>{{ val }}</p>
+        {% endfor %}
+    </div>
 {% endblock %}
