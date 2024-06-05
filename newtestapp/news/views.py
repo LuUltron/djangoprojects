@@ -8,3 +8,6 @@ def news_home(request):
         'news':news
     }
     return render(request, 'news/news_home.html', data)
+
+def create(request):
+    return render(request, 'news/create.html')
